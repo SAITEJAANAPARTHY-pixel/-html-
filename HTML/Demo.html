@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MY FIRST WEBPAGE</title>
+    <meta http-equiv="refresh" content="30">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+            float: left;
+            width: 20%;
+            height: 300px;
+            /* only for demonstration, should be removed */
+            background: rgb(204, 204, 204);
+            padding: 20px;
+        }
+         /* Create two columns/boxes that floats next to each other */
+       nav {
+            float: ri;
+            width: 20%;
+            height: 300px;
+            /* only for demonstration, should be removed */
+            background: rgb(204, 204, 204);
+            padding: 20px;
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 10px;
+            width: 60%;
+            background-color: #f1f1f1;
+            height: 300px;
+            /* only for demonstration, should be removed */
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: rgb(0, 0, 0);
+            padding: 60px;
+            text-align: center;
+            color: rgb(173, 56, 56);
+        }
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2 style="border: 20px solid teal; ">BASIC WEBPAGE</h2>
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+        Click me to display Date and Time.</button>
+    
+    <p id="demo"></p>
+
+    </header>
+
+    <section>
+        <nav>
+
+            <ul>
+                <h4>DEMO LINKS</h4>
+                <li><a href="https://www.facebook.com/" target="_blank">facebook</a></li>
+                <li><a href="https://www.instagram.com/">instagram</a></li>
+                <li><a href="https://web.whatsapp.com/">whatsapp</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>I MADE WEBPAGE USING HTML,CSS AND JS</h1>
+            <img src="LOL.jpeg" alt="Demo Picture" width="460" height="220">
+            
+        </article>
+    </section>
+
+    <footer>
+        <p><div class="weatherWidget"></div> 
+        <script>
+            window.weatherWidgetConfig = window.weatherWidgetConfig || [];
+            window.weatherWidgetConfig.push({
+                selector: ".weatherWidget",
+                apiKey: "KCP3XU2HCZ4N9TY54JMS9MPH2", //Sign up for your personal key
+                location: "Mississauga,ON", //Enter an address
+                unitGroup: "us", //"us" or "metric"
+                forecastDays: 7, //how many days forecast to show
+                title: "Mississauga,Ontario", //optional title to show in the 
+                showTitle: true,
+                showConditions: true
+            });
+
+            (function () {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+
+        </script>
+        </p>
+    </footer>
+
+</body>
+
+</html>
