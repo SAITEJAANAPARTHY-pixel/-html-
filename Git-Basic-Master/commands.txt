@@ -1,0 +1,7 @@
+git init - to initialize the repository
+git remote add origin - https://github.com/SAITEJAANAPARTHY-pixel/-html-.git connect your local repository
+git status - to check the status of the files to see if they are created / modified
+git add filename - to add files to local git repository
+git add . - to add mutliple files to local repository
+git commit -am "added new files to repository" - This will commit all the changes made to files
+git push origin master
